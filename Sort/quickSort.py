@@ -1,3 +1,7 @@
+# Time complexity
+# Worst case --> O(n^2)
+# Average case --> O(nlogn)
+
 def quickSort(L):
 
     less = []

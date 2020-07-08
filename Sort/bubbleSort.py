@@ -1,3 +1,7 @@
+# Time complexity
+# Worst case --> O(n^2)
+# Average case --> O(n^2)
+
 def bubbleSort(L):
     for j in range(len(L) - 1):
         swap = False

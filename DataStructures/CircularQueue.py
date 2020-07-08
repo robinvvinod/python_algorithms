@@ -4,7 +4,7 @@ class queue():
         self.size = size
         self.head = 0
         self.tail = 0
-        self.array = [None] * (size + 1)
+        self.array = [None for i in range(size)]
 
     def isEmpty(self):
         return self.head == self.tail
