@@ -22,4 +22,7 @@ Implementations of basic algorithms in Python
   * Quicksort
   * Merge Sort
   * Insertion Sort
-  
+
+## Base conversion
+  * K2D
+  * D2K
