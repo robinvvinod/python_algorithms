@@ -54,15 +54,15 @@ class BST():
     def existsRecursive(self, data, cur):
         if data is cur.data:
             return True
+
+        if data < cur.data:
+            if cur.left is None:
+                return False
+            self.existsRecursive(data, cur.left)
         else:
-            if data < cur.data:
-                if cur.left is None:
-                    return False
-                self.existsRecursive(data, cur.left)
-            else:
-                if cur.right is None:
-                    return False
-                self.existsRecursive(data, cur.right)
+            if cur.right is None:
+                return False
+            self.existsRecursive(data, cur.right)
 
     def existsIterative(self, data):
         cur = self.root
