@@ -29,9 +29,13 @@ class BST():
             if cur.right is None:
                 cur.right = Node(data)
             else:
-                self.insertRecusrive(data, cur.right)
+                self.insertRecursive(data, cur.right)
 
     def insertIterative(self, data):
+        if self.root is None:
+            self.root = Node(data)
+            return
+
         cur = self.root
         while True:
             if data < cur.data:
@@ -47,9 +51,8 @@ class BST():
 
     def exists(self, data):
         if self.root is None:
-            return None
-        else:
-            self.existsRecursive(data, self.root)
+            return False
+        self.existsRecursive(data, self.root)
 
     def existsRecursive(self, data, cur):
         if data is cur.data:

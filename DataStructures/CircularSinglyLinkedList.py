@@ -41,7 +41,7 @@ class CSLL():
             return False
         else:
             cur = self.first
-            while cur.next is not self.first and cur.data is not data:
+            while (cur.next is not self.first) and (cur.data is not data):
                 cur = cur.next
             if cur.data is not data:
                 return False
@@ -55,10 +55,11 @@ class CSLL():
                     cur = cur.next
                 cur.next = self.first.next
                 self.first = self.first.next
-                return True
-            while cur.next.data is not data:
-                cur = cur.next
-            cur.next = cur.next.next
+            
+            else:
+                while cur.next.data is not data:
+                    cur = cur.next
+                cur.next = cur.next.next
             return True
         else:
             return False
