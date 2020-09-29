@@ -11,3 +11,18 @@ def binarySearch(s, x):
             else:
                 end = mid - 1
     return -1
+
+
+def binarySearchRecursive(s, start, end, x):
+    if end >= start:
+        mid = (start + end) // 2
+        if s[mid] == x:
+            return mid
+
+        if s[mid] > x:
+            return binarySearchRecursive(s, start, mid - 1, x)
+        else:
+            return binarySearchRecursive(s, mid + 1, end, x)
+
+    else:
+        return -1

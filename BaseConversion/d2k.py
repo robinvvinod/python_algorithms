@@ -1,8 +1,8 @@
 def d2k(num, k):
     mapping = "0123456789ABCDEFGHIJKLMNOPQRSTUVQXYZ"
-    result = ""
+    res = ""
     while num > 0:
         digit = num % k
-        result = str(mapping[digit]) + result
+        res += str(mapping[digit])
         num //= k
-    return result
+    return res
