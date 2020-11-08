@@ -43,6 +43,7 @@ class SLL():
     def delete(self, data):
         if self.exists(data):
             cur = self.first
+            prev = cur
             while cur.data is not data:
                 prev = cur
                 cur = cur.next
